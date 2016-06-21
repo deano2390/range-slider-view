@@ -441,16 +441,7 @@ public class RangeSliderView extends View {
       selectedSlotX - radius <= x && x <= selectedSlotX + radius &&
         selectedSlotY - radius <= y && y <= selectedSlotY + radius;
   }
-
-  private void drawEmptySlots(Canvas canvas) {
-    paint.setColor(emptyColor);
-    int h = getHeightWithPadding();
-    int y = getPaddingTop() + (h >> 1);
-    for (int i = 0; i < rangeCount; ++i) {
-      canvas.drawCircle(slotPositions[i], y, slotRadius, paint);
-    }
-  }
-
+  
   public int getHeightWithPadding() {
     return getHeight() - getPaddingBottom() - getPaddingTop();
   }
@@ -459,18 +450,7 @@ public class RangeSliderView extends View {
     return getWidth() - getPaddingLeft() - getPaddingRight();
   }
 
-  private void drawFilledSlots(Canvas canvas) {
-    paint.setColor(filledColor);
-    int h = getHeightWithPadding();
-    int y = getPaddingTop() + (h >> 1);
-    for (int i = 0; i < rangeCount; ++i) {
-      if (slotPositions[i] <= currentSlidingX) {
-        canvas.drawCircle(slotPositions[i], y, slotRadius, paint);
-      }
-    }
-  }
-
-  private void drawBar(Canvas canvas, int from, int to, int color) {
+  void drawBar(Canvas canvas, int from, int to, int color) {
     paint.setColor(color);
     int h = getHeightWithPadding();
     int half = (barHeight >> 1);
@@ -478,7 +458,7 @@ public class RangeSliderView extends View {
     canvas.drawRect(from, y - half, to, y + half, paint);
   }
 
-  private void drawRippleEffect(Canvas canvas) {
+  void drawRippleEffect(Canvas canvas) {
     if (rippleRadius != 0) {
       canvas.save();
       ripplePaint.setColor(Color.GRAY);
@@ -502,19 +482,19 @@ public class RangeSliderView extends View {
     int border = (spacing >> 1);
     int x0 = getPaddingLeft() + border;
     int y0 = getPaddingTop() + (h >> 1);
-    drawEmptySlots(canvas);
-    drawFilledSlots(canvas);
+    //drawEmptySlots(canvas);
+    //drawFilledSlots(canvas);
 
     /** Draw empty bar */
-    drawBar(canvas, (int) slotPositions[0], (int) slotPositions[rangeCount - 1], emptyColor);
+    drawBar(canvas, (int) slotPositions[0], (int) slotPositions[rangeCount - 1], filledColor);
 
     /** Draw filled bar */
-    drawBar(canvas, x0, (int) currentSlidingX, filledColor);
+    //drawBar(canvas, x0, (int) currentSlidingX, filledColor);
 
     /** Draw the selected range circle */
     paint.setColor(filledColor);
     canvas.drawCircle(currentSlidingX, y0, radius, paint);
-    drawRippleEffect(canvas);
+
   }
 
   @Override
