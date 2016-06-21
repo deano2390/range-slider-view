@@ -436,12 +436,14 @@ public class RangeSliderView extends View {
     return true;
   }
 
-  private boolean isInSelectedSlot(float x, float y) {
+  boolean isInSelectedSlot(float x, float y) {
+    float touchArea = radius * 2;
+
     return
-      selectedSlotX - radius <= x && x <= selectedSlotX + radius &&
-        selectedSlotY - radius <= y && y <= selectedSlotY + radius;
+      selectedSlotX - touchArea <= x && x <= selectedSlotX + touchArea &&
+        selectedSlotY - touchArea <= y && y <= selectedSlotY + touchArea;
   }
-  
+
   public int getHeightWithPadding() {
     return getHeight() - getPaddingBottom() - getPaddingTop();
   }
