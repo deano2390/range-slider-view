@@ -1,111 +1,129 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:rsv="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.github.channguyen.rsv.RangeSliderView
-        android:id="@+id/rsv_small"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:rsv="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="50dp"
-        rsv:filledColor="#1A5F77" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-
-    <com.github.channguyen.rsv.RangeSliderView
-        android:id="@+id/rsv_large"
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="50dp"
-        rsv:filledColor="#FF6600"
-        rsv:rangeCount="10" />
-
-    <com.github.channguyen.rsv.RangeSliderView
-        android:id="@+id/rsv_custom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="50dp"
-        rsv:barHeightPercent="0.1"
-        rsv:emptyColor="#a8aeb8"
-        rsv:filledColor="#00cbff"
-        rsv:rangeCount="5" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal">
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
 
         <com.github.channguyen.rsv.RangeSliderView
-            android:id="@+id/rsv_another"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center_vertical"
+            android:id="@+id/rsv_small"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:layout_weight="1"
-            rsv:barHeightPercent="0.1"
-            rsv:emptyColor="#a8aeb8"
-            rsv:filledColor="#FF0000"
-            rsv:rangeCount="5" />
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="1"
-            android:text="Range Slider"
-            android:textColor="#000000" />
-    </LinearLayout>
-
-    <com.github.channguyen.rsv.RangeSliderView
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
-        rsv:barHeightPercent="0.1"
-        rsv:emptyColor="#a8aeb8"
-        rsv:filledColor="#00FF00"
-        rsv:rangeCount="5" />
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/tv_dob"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:paddingBottom="10dp"
-            android:paddingLeft="5dp"
-            android:paddingRight="10dp"
-            android:paddingTop="10dp"
-            android:text="10/4/1993" />
+            android:layout_marginTop="50dp"
+            rsv:filledColor="#1A5F77" />
 
 
         <com.github.channguyen.rsv.RangeSliderView
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-
-            android:layout_weight="1"
-
-            rsv:emptyColor="#00FF00"
-            rsv:filledColor="#00FF00"
+            android:id="@+id/rsv_large"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="50dp"
+            rsv:filledColor="#FF6600"
             rsv:rangeCount="10" />
+
+        <com.github.channguyen.rsv.RangeSliderView
+            android:id="@+id/rsv_custom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="50dp"
+            rsv:barHeightPercent="0.1"
+            rsv:emptyColor="#a8aeb8"
+            rsv:filledColor="#00cbff"
+            rsv:rangeCount="5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <com.github.channguyen.rsv.RangeSliderView
+                android:id="@+id/rsv_another"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                rsv:barHeightPercent="0.1"
+                rsv:emptyColor="#a8aeb8"
+                rsv:filledColor="#FF0000"
+                rsv:rangeCount="5" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="Range Slider"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <com.github.channguyen.rsv.RangeSliderView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            rsv:barHeightPercent="0.1"
+            rsv:emptyColor="#a8aeb8"
+            rsv:filledColor="#00FF00"
+            rsv:rangeCount="5" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_dob"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:paddingBottom="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:text="10/4/1993" />
+
+
+            <com.github.channguyen.rsv.RangeSliderView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+
+                android:layout_weight="1"
+
+                rsv:emptyColor="#00FF00"
+                rsv:filledColor="#00FF00"
+                rsv:rangeCount="10" />
+
+
+
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
 
 
     </LinearLayout>
 
-
-</LinearLayout>
+</ScrollView>
