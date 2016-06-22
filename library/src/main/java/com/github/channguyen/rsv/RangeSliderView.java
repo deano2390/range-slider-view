@@ -35,6 +35,8 @@ public class RangeSliderView extends View {
 
     private static final int DEFAULT_HEIGHT_IN_DP = 50;
 
+    boolean touchEnabled;
+
     protected Paint paint;
 
     protected Paint ripplePaint;
@@ -112,6 +114,9 @@ public class RangeSliderView extends View {
 
                 sliderRadiusPercent = a.getFloat(
                         R.styleable.RangeSliderView_sliderRadiusPercent, DEFAULT_SLIDER_RADIUS_PERCENT);
+
+                touchEnabled = a.getBoolean(
+                        R.styleable.RangeSliderView_touchEnabled, true);
             } finally {
                 a.recycle();
                 sa.recycle();
@@ -378,6 +383,9 @@ public class RangeSliderView extends View {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+
+        if(!touchEnabled) return false;
+
         float y = event.getY();
         float x = event.getX();
         final int action = event.getActionMasked();

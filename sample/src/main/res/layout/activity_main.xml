@@ -19,6 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="30dp"
+            rsv:touchEnabled="false"
             android:layout_marginRight="30dp"
             android:layout_marginTop="50dp"
             rsv:barColor="#1A5F77" />
@@ -111,6 +112,7 @@
                 rsv:sliderColor="#000000"
                 rsv:sliderRadiusPercent="0.15"
                 rsv:barColor="#c3c3c3"
+
                 rsv:rangeCount="10" />
 
 

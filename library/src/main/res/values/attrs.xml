@@ -3,6 +3,7 @@
 
   <declare-styleable name="RangeSliderView">
     <attr name="rangeCount" format="integer"/>
+    <attr name="touchEnabled" format="boolean"/>
     <attr name="barColor" format="color"/>
     <attr name="sliderColor" format="color"/>
     <attr name="barHeightPercent" format="float"/>
