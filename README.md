@@ -35,7 +35,7 @@ Add the `com.github.channguyen.rsv.RangeSliderView` to your layout XML file.
     android:layout_height="50dp"
     android:layout_marginLeft="30dp"
     android:layout_marginRight="30dp"
-    rsv:filledColor="#1A5F77"
+    rsv:barColor="#1A5F77"
     />
 
 
@@ -46,7 +46,7 @@ Add the `com.github.channguyen.rsv.RangeSliderView` to your layout XML file.
     android:layout_height="100dp"
     android:layout_marginLeft="30dp"
     android:layout_marginRight="30dp"
-    rsv:filledColor="#FF6600"
+    rsv:barColor="#FF6600"
     />
 
 </LinearLayout>

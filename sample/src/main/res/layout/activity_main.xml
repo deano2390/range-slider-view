@@ -21,7 +21,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_marginTop="50dp"
-            rsv:filledColor="#1A5F77" />
+            rsv:barColor="#1A5F77" />
 
 
         <com.github.channguyen.rsv.RangeSliderView
@@ -29,7 +29,7 @@
             android:layout_width="300dp"
             android:layout_height="40dp"
             android:layout_marginTop="50dp"
-            rsv:filledColor="#FF6600"
+            rsv:barColor="#FF6600"
             rsv:rangeCount="10" />
 
         <com.github.channguyen.rsv.RangeSliderView
@@ -40,8 +40,8 @@
             android:layout_marginRight="30dp"
             android:layout_marginTop="50dp"
             rsv:barHeightPercent="0.1"
-            rsv:emptyColor="#a8aeb8"
-            rsv:filledColor="#00cbff"
+            rsv:sliderColor="#a8aeb8"
+            rsv:barColor="#00cbff"
             rsv:rangeCount="5" />
 
         <LinearLayout
@@ -61,8 +61,8 @@
                 android:layout_marginRight="30dp"
                 android:layout_weight="1"
                 rsv:barHeightPercent="0.1"
-                rsv:emptyColor="#a8aeb8"
-                rsv:filledColor="#FF0000"
+                rsv:sliderColor="#a8aeb8"
+                rsv:barColor="#FF0000"
                 rsv:rangeCount="5" />
 
             <Button
@@ -79,8 +79,8 @@
             android:layout_height="40dp"
             android:layout_marginTop="20dp"
             rsv:barHeightPercent="0.1"
-            rsv:emptyColor="#a8aeb8"
-            rsv:filledColor="#00FF00"
+            rsv:sliderColor="#a8aeb8"
+            rsv:barColor="#00FF00"
             rsv:rangeCount="5" />
 
 
@@ -107,11 +107,10 @@
             <com.github.channguyen.rsv.RangeSliderView
                 android:layout_width="0dp"
                 android:layout_height="30dp"
-
                 android:layout_weight="1"
-
-                rsv:emptyColor="#00FF00"
-                rsv:filledColor="#00FF00"
+                rsv:sliderColor="#000000"
+                rsv:sliderRadiusPercent="0.15"
+                rsv:barColor="#c3c3c3"
                 rsv:rangeCount="10" />
 
 
