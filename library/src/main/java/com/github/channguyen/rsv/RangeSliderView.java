@@ -446,6 +446,14 @@ public class RangeSliderView extends View {
         return getWidth() - getPaddingLeft() - getPaddingRight();
     }
 
+    public boolean isTouchEnabled() {
+        return touchEnabled;
+    }
+
+    public void setTouchEnabled(boolean touchEnabled) {
+        this.touchEnabled = touchEnabled;
+    }
+
     void drawBar(Canvas canvas, int from, int to, int color) {
         paint.setColor(color);
         int h = getHeightWithPadding();
@@ -472,6 +480,10 @@ public class RangeSliderView extends View {
         paint.setColor(sliderColor);
         canvas.drawCircle(currentSlidingX, y0, radius, paint);
 
+    }
+
+    public int getCurrentIndex() {
+        return currentIndex;
     }
 
     @Override
